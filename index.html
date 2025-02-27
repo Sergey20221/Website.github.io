@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Деревообрабатывающего Завода</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo-container">
+                    <img src="picture/logo-1895.jpg" alt="Логотип компании" class="header__logo">
+                    <div class="header__company-info">
+                        <h1 class="header__company-name">78 ДОК Н.М.</h1>
+                        <p class="header__company-description">Качественные дома, двери и окна из дерева.</p>
+                    </div>
+                </div>
+               <div class="header__actions">
+                    <button class="button button--primary header__order-button" id="orderButton">Заказать</button>
+                    <button class="button header__cart-button" id="cartButton" style="display: none;">
+                        <i class="fas fa-shopping-cart"></i> Корзина
+                        <span id="cartItemCount" class="cart-item-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое сайта -->
+    <main class="main">
+        <div class="container">
+
+            <!-- Блок с этапами работ -->
+            <section id="stages" class="section stages">
+                <h2 class="section__title">Этапы работ</h2>
+                <div class="stages__container">
+                    <div class="stages__item">
+                        <span class="stages__number">1</span>
+                        <p class="stages__text">Позвоните или напишите нам! Мы поможем выбрать или рассмотрим Ваш проект!</p>
+                    </div>
+                    <div class="stages__item">
+                        <span class="stages__number">2</span>
+                        <p class="stages__text">Обсудим условия и заключим с Вами договор!</p>
+                    </div>
+                    <div class="stages__item">
+                        <span class="stages__number">3</span>
+                        <p class="stages__text">Построим дом Вашей мечты!</p>
+                    </div>
+                    <div class="stages__item">
+                        <span class="stages__number">4</span>
+                        <p class="stages__text">Счастливо жить в новом доме!!!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок с домами -->
+            <section id="houses" class="section houses">
+                <h2 class="section__title">Наши дома</h2>
+                <div class="houses__grid">
+                    <!-- Карточки домов (пример) -->
+                    <div class="house__card">
+                        <img src="./picture/12_1.jpg" alt="Дом 1" class="house__image">
+                        <h3 class="house__title">Дом "Уютный"</h3>
+                        <p class="house__description">Общая площадь	257,8 м2</p>
+                        <span class="house__price">3 800 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Уютный" data-price="3800000">Выбрать</button>
+                    </div>
+                    <!-- Остальные дома (6 штук) будут здесь -->
+                      <div class="house__card">
+                        <img src="picture/13_1.jpg" alt="Дом 2" class="house__image">
+                        <h3 class="house__title">Дом "Солнечный"</h3>
+                        <p class="house__description">Общая площадь	200,8 м2</p>
+                        <span class="house__price">2 200 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Солнечный" data-price="2200000">Выбрать</button>
+                    </div>
+                      <div class="house__card">
+                        <img src="picture/14_1.jpg" alt="Дом 3" class="house__image">
+                        <h3 class="house__title">Дом "Загородный"</h3>
+                        <p class="house__description">Общая площадь: 235,2 м2</p>
+                        <span class="house__price">4 500 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Загородный" data-price="4500000">Выбрать</button>
+                    </div>
+                      <div class="house__card">
+                        <img src="picture/15_1.jpg" alt="Дом 4" class="house__image">
+                        <h3 class="house__title">Дом "Семейный"</h3>
+                        <p class="house__description">Общая площадь: 345,1 м2</p>
+                        <span class="house__price">5 000 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Семейный" data-price="5000000">Выбрать</button>
+                    </div>
+                      <div class="house__card">
+                        <img src="picture/16_1.jpg" alt="Дом 5" class="house__image">
+                        <h3 class="house__title">Дом "Дачный"</h3>
+                        <p class="house__description">Общая площадь: 367,1 м2</p>
+                        <span class="house__price">7 200 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Дачный" data-price="7200000">Выбрать</button>
+                    </div>
+                      <div class="house__card">
+                        <img src="picture/17_1.jpg" alt="Дом 6" class="house__image">
+                        <h3 class="house__title">Дом "Эко"</h3>
+                        <p class="house__description">Общая площадь: 367,1 м2</p>
+                        <span class="house__price">7 500 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дом Эко" data-price="7500000">Выбрать</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок с окнами и дверями -->
+            <section id="windows-doors" class="section windows-doors">
+                <h2 class="section__title">Окна и двери</h2>
+                <div class="windows-doors__grid">
+                    <!-- Карточки окон и дверей (пример) -->
+                    <div class="window-door__card">
+                        <img src="picture/18_original.jpg" alt="Окно 1" class="window-door__image">
+                        <h3 class="window-door__title">Евроокна</h3>
+                        <p class="window-door__description">Оконные блоки типа DIN (Евроокно)</p>
+                        <span class="window-door__price">от 30640  руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Окно Классика" data-price="30640">Выбрать</button>
+                    </div>
+                      <div class="window-door__card">
+                        <img src="picture/1672652904_pro-dachnikov-com-p-plastikovaya-dver-korichnevaya-so-steklom-46.jpg" alt="Окно 2" class="window-door__image">
+                        <h3 class="window-door__title">Деревянные двери</h3>
+                        <p class="window-door__description">Деревянное окно с одинарным остеклением, под заказ.</p>
+                        <span class="window-door__price"> от 15 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Окно Эконом" data-price="15000">Выбрать</button>
+                    </div>
+                      <div class="window-door__card">
+                        <img src="picture/osteklenie-balkona-ot-pola-do-potolka.jpg" alt="Дверь 1" class="window-door__image">
+                        <h3 class="window-door__title">Алюминивые остекления лоджий Al</h3>
+                        <p class="window-door__description">Под заказ Алюминивые остекления лоджий Al</p>
+                        <span class="window-door__price">от 50 000 руб.</span>
+                        <button class="button button--primary add-to-cart" data-product="Дверь Входная" data-price="50000">Выбрать</button>
+               
+            </section>
+
+            <!-- Блок с контактами -->
+            <section id="contacts" class="section contacts">
+                <h2 class="section__title">Контакты</h2>
+                <div class="contacts__container">
+                    <div class="contacts__item">
+                        <span class="contacts__label">Телефон:</span>
+                        <span class="contacts__value">+7 (831) 224-04-36</span>
+                    </div>
+                    <div class="contacts__item">
+                        <span class="contacts__label">Email:</span>
+                        <span class="contacts__value">dok78@dok78.gvsu.ru</span>
+                    </div>
+                    <div class="contacts__item">
+                        <span class="contacts__label">Адрес:</span>
+                        <span class="contacts__value">Нижний Новгород, ул. Вторчермета, д. 7.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            
+            <p class="footer__copyright">&copy; Информация, представленная на сайте, не является публичной офертой</p>
+        </div>
+    </footer>
+
+     <!-- Корзина -->
+    <div class="cart" id="cart">
+        <div class="cart__content">
+            <span class="modal__close" id="closeCartModal"><i class="fas fa-times"></i></span>
+            <h2 class="cart__title">Корзина</h2>
+            <ul class="cart__list" id="cartList">
+            </ul>
+            <div class="cart__total">Итого: <span id="cartTotal">0</span> руб.</div>
+            <button class="button button--primary" id="checkoutButton" style="display:none;">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Всплывающее окно заказа (первое) -->
+    <div class="modal" id="orderModal">
+        <div class="modal__content">
+            <span class="modal__close" id="closeOrderModal"><i class="fas fa-times"></i></span>
+            <h2 class="modal__title">Оформить заказ</h2>
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label for="name">ФИО:</label>
+                    <input type="text" id="name" name="name" required placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                </div>
+                <div class="form-group">
+                    <label for="product">Что хотите заказать:</label>
+                    <select id="product" name="product">
+                        <option value="" disabled selected>Выберите товар</option>
+                        <option value="house">Дом</option>
+                        <option value="door">Дверь</option>
+                        <option value="window">Окно</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий (необязательно):</label>
+                    <textarea id="comment" name="comment" rows="3" placeholder="Например, размер дома, цвет двери"></textarea>
+                </div>
+                <button type="submit" class="button button--primary">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Окно оформления заказа (из корзины) -->
+     <div class="modal" id="checkoutModal">
+        <div class="modal__content">
+            <span class="modal__close" id="closeCheckoutModal"><i class="fas fa-times"></i></span>
+            <h2 class="modal__title">Оформление заказа</h2>
+            <form class="order-form" id="checkoutForm">
+                <div class="form-group">
+                    <label for="nameCheckout">ФИО:</label>
+                    <input type="text" id="nameCheckout" name="nameCheckout" required placeholder="Иванов Иван Иванович">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneCheckout">Номер телефона:</label>
+                    <input type="tel" id="phoneCheckout" name="phoneCheckout" required placeholder="+7 (999) 123-45-67">
+                </div>
+
+                <div class="form-group">
+                    <label>Ваш заказ:</label>
+                    <ul id="checkoutCartList">
+                    </ul>
+                </div>
+
+                <div class="cart__total">Итого: <span id="checkoutCartTotal">0</span> руб.</div>
+
+                <button type="submit" class="button button--primary" id="confirmCheckoutButton">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
